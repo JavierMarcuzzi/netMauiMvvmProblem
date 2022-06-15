@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<Shell
+    x:Class="AppMarkupValidator.AppShell"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:local="clr-namespace:AppMarkupValidator"
+    Shell.FlyoutBehavior="Flyout">
+
+    <ShellContent
+        Title="Home"
+        ContentTemplate="{DataTemplate local:MainPage}"
+        Route="MainPage" />
+
+    <ShellContent
+        Title="Mi Markup"
+        ContentTemplate="{DataTemplate local:MainPageCSharpMarkup}"
+        Route="MainPageCSharpMarkup" />
+
+    <ShellContent
+        Title="Contador mvvm"
+        ContentTemplate="{DataTemplate local:ContadorPage}"
+        Route="ContadorPage" />
+
+    <ShellContent
+        Title="Mi markup DI"
+        ContentTemplate="{DataTemplate local:MainPageCSharpMarkupDI}"
+        Route="MainPageCSharpMarkupDI"/>
+  
+    <ShellContent
+        Title="Valida Fluent"
+        ContentTemplate="{DataTemplate local:MainPageCSharpMarkupValidationfluentDI}"
+        Route="MainPageCSharpMarkupValidationfluentDI"/>
+
+     <ShellContent
+        Title="Valida Puro C#"
+        ContentTemplate="{DataTemplate local:MainPageCSharpValidationfluentDI}"
+        Route="MainPageCSharpValidationfluentDI"/>
+
+</Shell>

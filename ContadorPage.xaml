@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<ContentPage x:Class="AppMarkupValidator.ContadorPage"
+             xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:viewmodel="clr-namespace:AppMarkupValidator"
+             x:DataType="local:miViewModel"
+             xmlns:local="clr-namespace:AppMarkupValidator.ViewModels">
+    <ScrollView>
+        <VerticalStackLayout>
+              <Label Text="VM" FontSize="30" HorizontalOptions="Center"/>
+
+            <Label 
+                Text="{Binding Count, StringFormat='Current count: {0}'}"
+                FontSize="18"
+                FontAttributes="Bold"
+                HorizontalOptions="Center" />
+
+            <Button 
+                Text="Click me"
+                FontAttributes="Bold"
+                SemanticProperties.Hint="Counts the number of times you click"
+                Command="{Binding IncrementCountCommand}"
+                HorizontalOptions="Center" />
+
+            <!--<Button 
+                Text="Navigate"
+                FontAttributes="Bold"
+                Command="{Binding NavigateCommand}"
+                HorizontalOptions="Center" />-->
+
+        </VerticalStackLayout>
+
+    </ScrollView>
+</ContentPage>
